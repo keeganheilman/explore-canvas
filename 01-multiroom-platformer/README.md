@@ -1,0 +1,13 @@
+*project steps*
+- [x] project setup
+- [ ] create a player
+- [ ] player movement
+- [ ] background sprite
+- [ ] collision blocks
+- [ ] collision detection
+- [ ] sprite animation
+- [ ] hitbox implementation
+- [ ] sprite swapping
+- [ ] entering doors
+- [ ] change levels
+- [ ] next steps...
