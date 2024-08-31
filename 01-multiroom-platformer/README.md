@@ -2,8 +2,8 @@
 - [x] project setup
 - [x] create a player
 - [x] implement gravity
-- [ ] player movement
-- [ ] background sprite
+- [x] player movement
+- [x] background sprite
 - [ ] collision blocks
 - [ ] collision detection
 - [ ] sprite animation
