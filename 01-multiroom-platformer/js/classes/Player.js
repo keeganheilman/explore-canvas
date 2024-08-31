@@ -1,6 +1,7 @@
 
 class Player {
     constructor() {
+        this.gravity = 1
         this.position = {
             x: 100,
             y: 100
@@ -11,6 +12,10 @@ class Player {
         this.sides = {
             bottom: this.position.y + this.height
         }
+        this.velocity = {
+            x: 0,
+            y: 0
+        }
     }
 
     draw() {
@@ -20,10 +25,12 @@ class Player {
     }
 
     update() {
+
+        this.position.y += this.velocity.y
         // check whether player is at canvas floor
-        if (this.sides.bottom < canvas.height) {
-            this.position.y++
+        if (this.sides.bottom + this.velocity.y < canvas.height) {
+            this.velocity.y += this.gravity
             this.sides.bottom = this.position.y + this.height
-        }
+        } else this.velocity.y = 0
     }
 }
