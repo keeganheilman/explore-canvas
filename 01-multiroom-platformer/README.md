@@ -1,6 +1,6 @@
 *project steps*
 - [x] project setup
-- [ ] create a player
+- [x] create a player
 - [ ] player movement
 - [ ] background sprite
 - [ ] collision blocks
