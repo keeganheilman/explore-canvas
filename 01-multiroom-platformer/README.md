@@ -4,7 +4,7 @@
 - [x] implement gravity
 - [x] player movement
 - [x] background sprite
-- [ ] collision blocks
+- [x] collision blocks
 - [ ] collision detection
 - [ ] sprite animation
 - [ ] hitbox implementation
