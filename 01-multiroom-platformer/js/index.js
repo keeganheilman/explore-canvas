@@ -16,7 +16,9 @@ const background = new Sprite({
     imageSrc: './img/background.png',
 })
 
-const player = new Player()
+const player = new Player({
+    collisionBlocks,
+})
 
 const keys = {
     w: {

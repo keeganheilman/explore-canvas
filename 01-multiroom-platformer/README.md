@@ -5,7 +5,7 @@
 - [x] player movement
 - [x] background sprite
 - [x] collision blocks
-- [ ] collision detection
+- [x] collision detection
 - [ ] sprite animation
 - [ ] hitbox implementation
 - [ ] sprite swapping
