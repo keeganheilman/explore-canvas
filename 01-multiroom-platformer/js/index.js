@@ -18,6 +18,8 @@ const background = new Sprite({
 
 const player = new Player({
     collisionBlocks,
+    imageSrc: './img/player/idle.png',
+    frameRate: 5,
 })
 
 const keys = {

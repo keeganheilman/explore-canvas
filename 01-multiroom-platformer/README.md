@@ -6,7 +6,7 @@
 - [x] background sprite
 - [x] collision blocks
 - [x] collision detection
-- [ ] sprite animation
+- [x] sprite animation
 - [ ] hitbox implementation
 - [ ] sprite swapping
 - [ ] entering doors
