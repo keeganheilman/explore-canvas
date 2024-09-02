@@ -18,8 +18,21 @@ const background = new Sprite({
 
 const player = new Player({
     collisionBlocks,
-    imageSrc: './img/player/idle.png',
     frameRate: 5,
+    animations: {
+        idleRight: {
+            frameRate: 5,
+            frameBuffer: 2,
+            loop: true,
+            imageSrc: './img/player/idle.png',
+        },
+        idleLeft: {
+            frameRate: 5,
+            frameBuffer: 2,
+            loop: true,
+            imageSrc: './img/player/idle.png',
+        }
+    }
 })
 
 const keys = {
@@ -46,8 +59,14 @@ function animate() {
         collisionBlock.draw()
     })
     player.velocity.x = 0
-    if (keys.d.pressed) player.velocity.x = 5
-    else if (keys.a.pressed) player.velocity.x = -5
+    if (keys.d.pressed) {
+        player.switchSprite('idleRight')
+        player.velocity.x = 5
+    }
+    else if (keys.a.pressed) {
+        player.switchSprite('idleLefts')
+        player.velocity.x = -5
+    }
     player.draw()
     player.update()
 }
