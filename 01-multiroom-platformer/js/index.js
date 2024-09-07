@@ -37,6 +37,21 @@ const player = new Player({
     }
 })
 
+
+const doors = [
+    new Sprite({
+        position: {
+            x: 520,
+            y: 288,
+        },
+        imageSrc: './img/doorOpening.png',
+        frameRate: 5,
+        frameBuffer: 4,
+        loop:false,
+        autoplay: false,
+    }),
+]
+
 const keys = {
     w: {
         pressed: false
@@ -60,6 +75,11 @@ function animate() {
     collisionBlocks.forEach(collisionBlock => {
         collisionBlock.draw()
     })
+
+    doors.forEach(door => {
+        door.draw()
+    })
+
     player.velocity.x = 0
     if (keys.d.pressed) {
         player.switchSprite('idleRight')
