@@ -33,7 +33,14 @@ const player = new Player({
             frameBuffer: 2,
             loop: true,
             imageSrc: './img/player/idleLeft.png',
-        }
+        },
+        enterDoor: {
+            frameRate: 5,
+            frameBuffer: 5,
+            loop: false,
+            imageSrc: './img/player/enterDoor.png'
+
+        },
     }
 })
 
