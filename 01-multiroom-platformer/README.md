@@ -8,7 +8,7 @@
 - [x] collision detection
 - [x] sprite animation
 - [x] hitbox implementation
-- [ ] sprite swapping
+- [x] sprite swapping
 - [ ] entering doors
 - [ ] change levels
 - [ ] next steps...

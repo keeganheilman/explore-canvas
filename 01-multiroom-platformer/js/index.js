@@ -26,13 +26,13 @@ const player = new Player({
             frameRate: 5,
             frameBuffer: 2,
             loop: true,
-            imageSrc: './img/player/idle.png',
+            imageSrc: './img/player/idleRight.png',
         },
         idleLeft: {
             frameRate: 5,
             frameBuffer: 2,
             loop: true,
-            imageSrc: './img/player/idle.png',
+            imageSrc: './img/player/idleLeft.png',
         }
     }
 })
