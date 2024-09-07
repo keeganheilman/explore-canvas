@@ -25,8 +25,10 @@ class Sprite {
         }
 
     }
+
     draw() {
         if (!this.loaded) return
+        // console.log('Sprite draw method called successfully.')
         const cropbox = {
             position: {
                 x: (this.width * this.currentFrame),
@@ -37,7 +39,7 @@ class Sprite {
         }
 
         c.drawImage(
-            this.animations.imageSrc,
+            this.image,
             cropbox.position.x,
             cropbox.position.y,
             cropbox.width,

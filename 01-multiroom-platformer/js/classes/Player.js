@@ -51,9 +51,7 @@ class Player extends Sprite {
     
 
     switchSprite( name ) {
-        if (this.image === this.animations[name].image){
-            return    
-        }
+        if (this.image === this.animations[name].image) return    
         this.currentFrame = 0
         this.image = this.animations[name].image
         this.frameRate = this.animations[name].frameRate
@@ -74,7 +72,7 @@ class Player extends Sprite {
             ) {
                 // player moving left
                 if (this.velocity.x < 0) {
-                    console.log('collision to the left')
+                    // console.log('collision to the left')
                     const offset = this.hitbox.position.x - this.position.x 
                     this.velocity.x = 0
                     this.position.x = collisionBlock.position.x + collisionBlock.width + 0.01 - offset
@@ -83,7 +81,7 @@ class Player extends Sprite {
                 }
                 // player moving right
                 if (this.velocity.x > 0) {
-                    console.log('collision to the right')
+                    // console.log('collision to the right')
                     const offset = this.hitbox.position.x - this.position.x + this.hitbox.width
                     this.velocity.x = 0
                     this.position.x = collisionBlock.position.x - offset - 0.01
@@ -108,7 +106,7 @@ class Player extends Sprite {
             ) {
                 // player moving up
                 if (this.velocity.y < 0) {
-                    console.log('collision above')
+                    // console.log('collision above')
                     const offset = this.hitbox.position.y - this.position.y 
                     this.velocity.y = 0
                     this.position.y = collisionBlock.position.y + collisionBlock.height + 0.01 - offset
@@ -116,7 +114,7 @@ class Player extends Sprite {
                 }
                 // player moving down
                 if (this.velocity.y > 0) {
-                    console.log('collision below')
+                    // console.log('collision below')
                     const offset = this.hitbox.position.y - this.position.y + this.hitbox.height
                     this.velocity.y = 0
                     this.position.y = collisionBlock.position.y - offset - 0.01

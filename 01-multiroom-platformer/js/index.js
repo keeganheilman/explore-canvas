@@ -13,12 +13,14 @@ const background = new Sprite({
         x: 0,
         y: 0,
     },
+    // imageSrc: 'test-image.png',
     imageSrc: './img/background.png',
 })
 
 const player = new Player({
     collisionBlocks,
     frameRate: 5,
+    imageSrc: './img/player/idle.png',
     animations: {
         idleRight: {
             frameRate: 5,
@@ -62,10 +64,16 @@ function animate() {
     if (keys.d.pressed) {
         player.switchSprite('idleRight')
         player.velocity.x = 5
+        player.lastDirection = 'right'
     }
     else if (keys.a.pressed) {
-        player.switchSprite('idleLefts')
+        player.switchSprite('idleLeft')
         player.velocity.x = -5
+        player.lastDirection = 'left'
+    }
+    else {
+        if (player.lastDirection === 'left') player.switchSprite('idleLeft')
+        else player.switchSprite('idleRight')
     }
     player.draw()
     player.update()
